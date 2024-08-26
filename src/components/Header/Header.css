@@ -1,0 +1,35 @@
+.header {
+    background-color: #000; /* Cor preta */
+    padding: 30px 0; /* Diminui o espaçamento vertical */
+    text-align: center; /* Centraliza o conteúdo */
+    width: 100%; /* Garante que o header ocupe 100% da largura da tela */
+    position: fixed; /* Fixa o header no topo da página */
+    top: 0; /* Posiciona o header no topo */
+    left: 0; /* Posiciona o header à esquerda */
+    z-index: 1000; /* Garante que o header esteja acima de outros elementos */
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones horizontalmente */
+    align-items: center; /* Centraliza os ícones verticalmente */
+    max-width: 1200px; /* Limita a largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+  }
+  
+  .header-content .icons {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones horizontalmente */
+    gap: 20px; /* Espaçamento entre os ícones */
+  }
+  
+  .header-content .icons i {
+    color: rgba(127, 255, 0, 0.5); /* Ícones com cor e opacidade */
+    font-size: 24px; /* Tamanho dos ícones */
+    cursor: pointer; /* Cursor pointer para indicar que os ícones são clicáveis */
+  }
+  
+  .header-content .icons i:hover {
+    color: rgba(127, 255, 0, 1); /* Cor dos ícones ao passar o mouse */
+  }
+  

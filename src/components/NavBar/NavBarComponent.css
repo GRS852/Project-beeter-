@@ -1,0 +1,51 @@
+.custom-navbar{
+  background-color: black;
+}
+
+.custom-title {
+  margin-left: 0;
+  padding-left: 0;
+  text-align: left; 
+  display: block; 
+  font-family: 'Dangrek', sans-serif;
+  margin-left: 5%;
+  color: white !important;
+}
+
+.navbar-brand{
+  font-size: 2rem !important;
+}
+
+/* src/components/NavBar/NavBarComponent.css */
+.bi-bell-fill {
+  color:  rgba(94, 223, 38) !important; /* Define a cor laranja do ícone */
+  font-size: 1.5rem; /* Aumenta o tamanho do ícone, se necessário */
+}
+
+.bi-bell{
+  color: rgba(94, 223, 38) !important;
+  font-size: 1.5rem;
+}
+
+.bi-search{
+  color:  rgba(94, 223, 38) !important;
+  font-size: 1.5rem;
+}
+
+.bi-search:hover{
+  color:rgba(94, 223, 38, 0.5) !important;
+}
+
+.dropdown{
+  cursor: pointer;
+}
+
+.bi-distribute-vertical{
+  color:  rgba(94, 223, 38) !important;
+  font-size: 1.5rem;
+}
+
+.bi-distribute-vertical:hover{
+  color:  rgba(94, 223, 38, 0.5) !important;
+  font-size: 1.5rem;
+}
