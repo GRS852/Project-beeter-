@@ -16,11 +16,9 @@ function NavbarComponent() {
   const handleCloseSidebar = () => setShowSidebar(false);
 
   return (
-    <Navbar expand="lg" className="custom-navbar">
+    <Navbar expand="sm" className={`custom-navbar ${showSidebar ? 'sidebar-open' : ''}`}>
       <Container fluid>
         <Navbar.Brand href="#home" className="custom-title">BEETTER</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link href="#home">
               <i class="bi bi-search"></i>
@@ -35,11 +33,8 @@ function NavbarComponent() {
             <Nav.Link onClick={handleShowSidebar} className="dropdown">
             <i class="bi bi-distribute-vertical"></i>
             </Nav.Link>
-
             <SidebarComponent  show={showSidebar} onHide={handleCloseSidebar} />
-
           </Nav>
-        </Navbar.Collapse>
       </Container>
     </Navbar>
   );

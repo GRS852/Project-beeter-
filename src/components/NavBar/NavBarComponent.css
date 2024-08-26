@@ -1,5 +1,65 @@
 .custom-navbar{
   background-color: black;
+  transition: margin-left 0.5s ease;
+}
+
+.custom-navbar.sidebar-open{
+  margin-right: 400px;
+}
+
+@media(max-widht: 768px) {
+  .custom-navbar.sidebar-open {
+    margin-right: 350px;
+  }
+}
+
+.navbar-container {
+  width: 100%;
+  padding: 0;
+}
+
+.navbar .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .nav-link i{
+  font-size: 1.5rem;
+}
+
+.navbar .nav {
+  display: flex !important;
+  flex-direction: row !important; /* Força os ícones a ficarem em linha */
+  justify-content: flex-end !important; /* Alinha os ícones à direita */
+  align-items: center !important; /* Alinha verticalmente no centro */
+  flex-wrap: nowrap !important; /* Impede a quebra de linha */
+}
+
+@media (max-width: 990px) {
+  .navbar .nav-link i {
+    display: inline-block;
+  }
+}
+
+@media (max-width:992px){
+  .navbar .nav-link i{
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px){
+  .navbar .nav-link{
+    font-size: 1rem;
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 576px){
+  .navbar .nav-link i{
+    font-size: 0.8rem;
+    padding: 0 5px;
+  }
 }
 
 .custom-title {
@@ -16,6 +76,23 @@
   font-size: 2rem !important;
 }
 
+@media (max-width:992px){
+  .navbar-brand{
+    font-size: 1.7rem !important;
+  }
+}
+
+@media (max-width:768px){
+  .navbar-brand{
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width:576px){
+  .navbar-brand{
+    font-size: 1rem !important;
+  }
+}
 /* src/components/NavBar/NavBarComponent.css */
 .bi-bell-fill {
   color:  rgba(94, 223, 38) !important; /* Define a cor laranja do ícone */

@@ -1,0 +1,20 @@
+.custom-offcanvas{
+    background-color: black !important;
+    font-family: 'Dangrek', sans-serif;
+}
+
+.custom-offcanvas .offcanvas-title{
+    color: white !important;
+}
+
+
+.nav-link{
+    color: rgba(180, 113, 204, 1) !important;
+    font-family: "Roboto", sans-serif !important;
+    font-weight: 500 !important;
+    
+}
+
+.nav-link:hover{
+    color: rgba(180, 113, 204, 0.5) !important;
+}
