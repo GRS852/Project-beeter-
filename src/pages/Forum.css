@@ -1,0 +1,19 @@
+
+
+.forum-page{
+   
+    flex-grow: 1 !important; 
+    flex-direction: column !important;  /* Caso precise organizar o conteúdo do fórum em coluna */
+    background-color: #2C2B2B !important;
+}
+
+
+
+.title-text {
+    font-family: 'Oswald', 'sans-serif';
+    font-weight: 600;
+    color: #5EDF26;
+    text-align: center;
+    margin-bottom: 100px;
+}
+

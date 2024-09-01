@@ -1,0 +1,11 @@
+.custom-footer {
+  background-image: url('/public/imagens/comeia_preta.png'); 
+  padding: 0px;
+  background-color: black;
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
+  width: 100%;
+  height: 100px;
+  padding: 10px 0;
+}
