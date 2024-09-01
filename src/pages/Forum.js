@@ -11,11 +11,20 @@ function Forum() {
             <NavbarComponent />
             <main>
                 <h1 className="title-text"> Fórum </h1>
-                <PresentCard>
-                    <div className="content-card">
-                      <h1 className="title">Curso de tanamnam</h1>
-                    </div>
-                </PresentCard>
+                <div className="cards">
+                    <PresentCard imageSrc={'/imagens/Training_1.png'}>
+                        <div className="content-card-1">
+                            <h1 className="title-card">Comunicação eficaz</h1>
+                            <i className="bi bi-chat-text"></i>
+                        </div>
+                    </PresentCard>
+                    <PresentCard imageSrc={'/imagens/Training_2.png'}>
+                        <div className="content-card">
+                            <h1 className="title-card">Comunicação eficaz</h1>
+                            <i className="bi bi-chat-text"></i>
+                        </div>
+                    </PresentCard>
+                </div>    
             </main>
         </div>
     );

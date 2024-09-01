@@ -13,6 +13,18 @@
     transition: all 0.3s ease-in-out;
 }
 
+.card-image{
+    width: calc(100% + 12px); 
+    height:  calc(100% + 12px); 
+    top: -10px !important; 
+    left: -10px !important;
+    object-fit: cover;
+    position: absolute; 
+    top: 0;
+    left: 0;
+
+}
+
 .box-content{
     background-color: #2C1A32;
     color: white;
@@ -42,6 +54,8 @@
 .card:hover {
     box-shadow: 0 0 40px rgba(75, 0, 130, 0.9); 
 }
+
+
 
 @media (max-width: 768px) {
     .card {

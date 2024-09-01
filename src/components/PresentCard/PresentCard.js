@@ -1,9 +1,10 @@
 import './PresentCard.css'
 
 
-function PresentCard({children}){
+function PresentCard({children, imageSrc}){
   return(
-    <div className='card'>
+    <div className='card' >
+      {imageSrc && <img src={imageSrc} alt="Card" className="card-image" />}
       <div className='box-content'>
         {children}
       </div>
