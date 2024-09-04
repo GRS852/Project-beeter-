@@ -1,0 +1,37 @@
+.filter-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    flex-direction: row; 
+}
+
+.selection-course,
+.selection-category {
+  margin-right: 30px; 
+}
+
+.selection-course .btn,
+.selection-category .btn {
+  background-color: #020202; 
+  border: 2px solid #5EDF26; 
+  color: white; 
+  padding: 10px 20px; 
+  font-size: 30px; 
+  font-weight: 600;
+  font-family: 'Oswald', 'sans-serif';  
+  border-radius: 23px; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.selection-course .btn:hover,
+.selection-category .btn:hover {
+  background-color: #7EEB5F; 
+  color: white; 
+}
+
+.selection-course .btn:focus,
+.selection-category .btn:focus {
+  outline: none; 
+  box-shadow: 0 0 0 0.2rem rgba(94, 223, 38, 0.25); 
+}

@@ -1,0 +1,34 @@
+.button-view-more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+
+}
+
+.button-view-more button:hover .bi-chevron-compact-down,
+.button-view-more button:hover .text-button {
+    color: rgba(126, 235, 95, 0.5); 
+    transition: color 0.3s ease; 
+}
+
+button{
+    background-color: transparent;
+    border: none;
+}
+
+
+.bi-chevron-compact-down{
+    padding: 10px;
+    font-size: 2rem;
+    color: rgba(94, 223, 38, 1);
+    transition: background-color 0.3s ease
+}
+
+.text-button{
+
+    font-family: 'Oswald', 'sans serif';
+    font-weight: 200;
+    font-size: 2rem;
+    color: rgba(94, 223, 38, 1);
+}
