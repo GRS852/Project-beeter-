@@ -1,0 +1,65 @@
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: #CF9DE1 !important;
+    width: 90%; 
+    max-width: 1350px; 
+    height: 150px !important; 
+    margin-left: auto; 
+    padding: 20px; 
+    margin-right: 0;
+    overflow: visible;
+    transition: all 0.3s ease-in-out;
+}
+
+.card-image{
+    width: calc(100% + 12px); 
+    height:  calc(100% + 12px); 
+    top: -10px !important; 
+    left: -10px !important;
+    object-fit: cover;
+    position: absolute; 
+    top: 0;
+    left: 0;
+
+}
+
+.box-content{
+    background-color: #2C1A32;
+    color: white;
+    width: 90%;
+    height: 35px;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    margin-left: 5px;
+    border-radius: 10px;
+
+}
+
+.card::before{
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background-color: rgba(0,0,0,0.5);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 0 40px rgba(75, 0, 130, 0.9); 
+}
+
+
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%; 
+        margin: 0 5px; 
+    }
+}

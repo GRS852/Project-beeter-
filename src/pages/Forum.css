@@ -1,0 +1,66 @@
+body {
+    zoom: 90% !important; /* Diminui a escala da página para 90% */
+}
+
+
+.cards{
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 56px !important;
+}
+
+
+.content-card-1 {
+    position: relative; 
+}
+
+.forum-page{
+   
+    flex-grow: 1 !important; 
+    flex-direction: column !important;  
+    background-color: #2C2B2B !important;
+    padding-bottom: 100px;
+}
+
+
+
+.title-text {
+    font-family: 'Oswald', 'sans-serif';
+    font-weight: 600;
+    font-size: 80px;
+    color: #5EDF26;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.title-sub {
+    font-family: 'Oswald', 'sans-serif';
+    font-weight: 600;
+    font-size: 65px;
+    color: #CF9DE1;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.title-card{
+    font-family: 'Oswald', 'sans serif';
+    font-weight: 600;
+    border: 20px;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 
+        -1px -1px 0 #9747FF,  
+        1px -1px 0 #9747FF,
+        -1px 1px 0 #9747FF,
+        1px 1px 0 #9747FF; 
+}
+
+.bi-chat-text{
+    color: #5EDF26;
+    font-size: 30px;
+    position: absolute;
+    top: -5px !important;
+    left: 20px;
+    transform: scaleX(-1);
+}
+
