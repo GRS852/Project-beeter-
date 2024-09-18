@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #2C2B2B;
+    color: #5EDF26;
+}
+
+strong {
+    color: #fff;
+}
+
+.dados-embaixo{
+    color: #B1EF96;
+    text-align:right;
+    width: 28%;    
+}
+
+img{
+    width: 25%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.nome-unibta{
+    color: #dd81da
+}
+
+.titulo-meu-perfil{
+    position: absolute;
+    text-align: center;
+    left: 45%;
+    top: 10%;
+  }
+
+.dados{
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: center; 
+}
+
+.textos {
+    /* Espaço entre os parágrafos */
+    position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.avatar{
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    
+}
+
+.content{
+    position: relative;
+    width: 550px;
+    height: 300px;
+    left: 25%;
+    top: 150px;
+    background-color: #1F1F1F;
+}
