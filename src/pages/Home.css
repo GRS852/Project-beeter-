@@ -1,0 +1,62 @@
+
+body{
+    background-color: #2C2B2B;
+    overflow-x: hidden;
+}
+
+
+.category-title{
+  background-color: #2C2B2B;
+  margin-top: -110px;
+  margin-left: -60px;
+}
+
+
+.slider1{
+  position: absolute;
+  top: 900px;
+  z-index: 500;
+  margin-left: 50px;
+}
+
+.card{
+  width: 250px;
+  background: #2C2B2B;
+  border-radius: 4%;
+  transition: 0.2s linear;
+  margin: 3px;
+  position: relative;
+}
+
+.card:hover{
+  transform: scaleX(1.4) scaleY(1.4);
+  z-index: 10;
+}
+
+.card-body{
+  display: none;
+  height: 0px;
+  padding: 10px 15px;
+  position: absolute;
+  background-color: #141414;
+  top: 120px;
+  width: 100%;
+}
+
+
+.card-icon{
+  color: #fff;
+  padding: 0px !important;
+  font-size: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.card:hover > .card-body{
+  display: block;
+height: max-content !important; 
+}
+
+
+
+
