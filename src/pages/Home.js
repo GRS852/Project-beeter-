@@ -4,7 +4,32 @@ import Banner from "../components/Banner/Banner";
 
 import './Home.css'
 
+const banner = {imagem: '/imagens/gestao.png' , alt: 'Liderança e Gestão'}
+
 function Home() {
+    return(
+<div className="home-page">
+    <NavbarComponent />
+    <Banner banner={banner} />
+    <main>
+        <div className="slider-box">
+            <section className="container-fluid slider1">
+                <div className="category-title">
+                    <h1 className="text-white"><b>Formações Recomendadas</b></h1>
+                        <div id="carouselExampleIndicators" className="carousel-slide">
+                        <div className="carousel-inner" style={{ position: 'relative', overflow: 'visible' }}>
+                            <div className="carousel-item active">
+                                <section className="position: absolute;">
+                                    <div className="card">
+                                        <img src={"/imagens/comunicacao.png"} className="card-img-top" alt="Comunicação Eficaz e Assertiva" />
+                                        <div className="card-body">
+                                            <section className="d-flex justify-content-between">
+                                                <div>
+                                                    <i className="bi bi-play-circle-fill card-icon"></i>
+                                                    <i className="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i className="bi bi-arrow-down-circle card-icon"></i>
     const[activeIndex, setActiveIndex] = useState(0);
 
     const items = [
@@ -92,6 +117,4 @@ function Home() {
         </div>
     )
 }
-
-
 export default Home;
