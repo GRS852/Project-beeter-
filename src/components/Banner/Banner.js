@@ -1,9 +1,9 @@
 import './Banner.css'
 
-function Banner(){
+function Banner({banner}){
     return(
     <section className="lane-page-img">
-        <img src={'/imagens/gestao.png'} alt="Liderança e Gestão" />
+        <img src={banner.imagem} alt={banner.alt} />
         <div className="btn-content">
         <button className="botao-play m-2">
                 <i className="bi bi-play-fill"/> 
@@ -18,3 +18,4 @@ function Banner(){
 }
 
 export default Banner;
+

@@ -1,0 +1,27 @@
+.zerocontent {
+    display: flex; /* Adiciona flexbox para o contêiner */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: space-between; /* Distribui os elementos; você pode usar flex-end para alinhá-los à direita */
+    position: relative;
+    width: 1424px;
+    height: 69px;
+    left: 4%;
+    background-color: #777777;
+    color: #fff;
+    margin-bottom: 20px; 
+    padding: 20px;         
+}
+
+.bt-lista {
+    width: 340px;              
+    height: 46px;              
+    background-color: #dcdada;  
+    color: #8A32A9;               
+    border: none;               
+    border-radius: 50px;         
+    font-size: 25px;            
+    cursor: pointer;
+    font-family: 'Oswald', 'sans serif';
+    font-size: 30px;
+    font-weight: bold;
+  }

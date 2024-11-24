@@ -1,64 +1,117 @@
-
-body{
-    background-color: #2C2B2B;
-    overflow-x: hidden;
-}
-
-
-.category-title{
+body {
   background-color: #2C2B2B;
-  margin-top: -110px;
-  margin-left: -60px;
+  overflow-x: hidden;
 }
 
+.category-title {
+  background-color: #2C2B2B;
+  margin-top: -6.875rem;
+  margin-left: -3.75rem;
+}
 
-.slider1{
-  position: absolute;
-  top: 900px;
-  z-index: 500;
-  margin-left: 50px;
+#carouselExampleIndicators {
+  position: relative;
+  width: 100%;
+}
+
+.slider1 {
+  position: relative; 
+  top: 6rem;
+  z-index: 10; 
+  margin-left: 3.125rem;
 }
 
 .card{
-  width: 250px;
-  background: #2C2B2B;
-  border-radius: 4%;
+  width: 24rem;
+  height: 13rem !important;
   transition: 0.2s linear;
-  margin: 3px;
-  position: relative;
+  padding: 0 !important;
+  background-color: #2A2929 !important;
 }
 
-.card:hover{
-  transform: scaleX(1.4) scaleY(1.4);
+.card:first-child{
+  margin-left: 7rem;
+}
+
+.card:hover {
+  transform: scale(1.2);
   z-index: 10;
 }
 
-.card-body{
+.card-body {
   display: none;
-  height: 0px;
-  padding: 10px 15px;
+  padding: 0.625rem 0.9375rem;
   position: absolute;
   background-color: #141414;
-  top: 120px;
+  top: 7.6rem;
   width: 100%;
 }
 
 
-.card-icon{
+.card-icon {
   color: #fff;
-  padding: 0px !important;
-  font-size: 28px;
+  font-size: 1.75rem;
   border-radius: 50%;
   cursor: pointer;
 }
 
-.card:hover > .card-body{
+.card:hover > .card-body {
   display: block;
-height: max-content !important; 
+  height: max-content !important;
 }
 
+.d-flex{
+  gap: 3rem;
+}
+
+.carousel-inner {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: visible;
+}
+
+.carousel-slide {
+  width: 100%;
+  background-color: #2A2929;
+  padding-bottom: 5rem;
+}
+
+.carousel-item {
+  margin-top: 5rem;
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.carrosel-title-txt {
+  padding: 1% 2% 1% 2%;
+  color: white;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+<<<<<<< HEAD
 .imput::placeholder{
   color:'#8A32A9'
+=======
+
+.carousel-control-next {
+  position: absolute;
+  right: 3.125rem;
+  top: 50%;
+  transform: translateY(-50%);
+>>>>>>> 995a3490356e7f65ec8b6281eca90f6c6a507bf2
 }
 
-
+.carousel-control-prev {
+  position: absolute;
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
