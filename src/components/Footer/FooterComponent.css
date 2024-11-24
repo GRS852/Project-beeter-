@@ -12,5 +12,6 @@
   z-index: 1;
   box-sizing: border-box;
   padding-bottom: 5px;
-  background-attachment: scroll
+  background-attachment: scroll;
+  position: relative;
 }

@@ -4,11 +4,13 @@ import Banner from "../components/Banner/Banner";
 
 import './Home.css'
 
+const banner = {imagem: '/imagens/gestao.png' , alt: 'Liderança e Gestão'}
+
 function Home() {
     return(
 <div className="home-page">
     <NavbarComponent />
-    <Banner />
+    <Banner banner={banner} />
     <main>
         <div className="slider-box">
             <section className="container-fluid slider1">
