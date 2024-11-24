@@ -57,6 +57,8 @@ body{
 height: max-content !important; 
 }
 
-
+.imput::placeholder{
+  color:'#8A32A9'
+}
 
 
