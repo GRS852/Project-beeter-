@@ -1,6 +1,5 @@
 import React from "react";
 import NavbarComponent from "../components/NavBar/NavBarComponent";
-// eslint-disable-next-line
 import Banner from "../components/Banner/Banner"; 
 import ListaDeTopicos from "../components/ListaDeTopicos/ListaDeTopicos";
 

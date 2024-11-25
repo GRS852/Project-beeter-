@@ -18,7 +18,7 @@ function Home() {
             src: "/imagens/gestao.png",
             alt: "Liderança e Gestão",
         },
-        // Adicione outros itens aqui...
+
     ];
 
     const handleNext = () => {
