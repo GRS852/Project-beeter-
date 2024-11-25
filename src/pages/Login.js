@@ -1,9 +1,48 @@
-import React from "react";
-import './Login.css'
-import NavbarComponent from "../components/NavBar/NavBarComponent";
+import React, { useState } from "react";
+import './Login.css';
 
-function Login(){
-    return(
+
+function Login() {
+    const [formData, setFormData] = useState({ email: '', senha: '' });
+    const [error, setError] = useState(null);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setError(null); 
+
+        try {
+            const response = await fetch('http://localhost:5000/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+              
+                localStorage.setItem('authToken', data.token);
+                alert('Login bem-sucedido!');
+               
+                window.location.href = '/';
+            } else {
+                const errorData = await response.json();
+                setError(errorData.error || 'Erro ao fazer login');
+            }
+        } catch (err) {
+            setError('Erro de conexão com o servidor');
+            console.error(err);
+        }
+    };
+
+
+return(
         <div className="login">
             <NavbarComponent />
             <main>
