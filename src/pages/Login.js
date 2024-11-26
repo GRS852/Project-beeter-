@@ -4,7 +4,7 @@ import './Login.css';
 import Footer from '../components/Footer/FooterComponent.js'
 
 function Login() {
-    const [formData, setFormData] = useState({ email: '', senha: '' });
+    const [formData, setFormData] = useState({ email: '', senha: ''});
     const [error, setError] = useState(null);
 
     const handleChange = (e) => {
@@ -27,9 +27,27 @@ function Login() {
 
             if (response.ok) {
                 const data = await response.json();
-                localStorage.setItem('authToken', data.token);
-                alert('Login bem-sucedido!');
-                window.location.href = '/home';
+                console.log('Resposta da API:', data); // Log para depuração
+                console.log('Permissão de usuário:', data.permissao_usuario)
+                console.log('Permissão de email:', data.email);
+                
+                if (data.permissao_usuario == 0){
+                    
+                    localStorage.setItem('authToken', data.token);
+                    alert('Login bem-sucedido!');
+                    window.location.replace('/home');
+
+                } else if (data.permissao_usuario ==  1){
+
+                    console.log('ENTREI NO RESPONSE OK LOGIN')
+                    localStorage.setItem('authToken', data.token);
+                    alert('Login bem-sucedido!');
+                    window.location.replace('/register');
+
+                } else {
+                    setError('Permissao de usuário inválida');
+                }
+                
             } else {
                 const errorData = await response.json();
                 setError(errorData.error || 'Erro ao fazer login');

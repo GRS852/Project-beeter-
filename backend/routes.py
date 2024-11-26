@@ -20,15 +20,21 @@ def init_app(app):
 
         try:
             data = request.get_json()
-            if not data.get('email') or not data.get('senha'):
-                return jsonify({'error': 'Email e senha são obrigatórios'}), 400
+            required_fields = ['nome_usuario','cpf', 'data_nasc', 'empresa', 'setor_empresa', 'email', 'senha']
+            missing_fields = [field for field in required_fields if not data.get(field)]
+            if missing_fields:
+                return jsonify({'error': f"Campos obrigatórios faltando: {', '.join(missing_fields)}"}), 400
             
             if Usuario.query.filter_by(email=data['email']).first():
                 return jsonify({'error': 'Usuário já existe'})
 
             new_user = Usuario(
-                nome=data['nome'],
-                email=data['email']
+                nome_usuario=data['nome_usuario'],
+                data_nasc=data['data_nasc'],
+                cpf=data['cpf'],
+                empresa=data['empresa'],
+                setor_empresa=data['setor_empresa'],
+                email=data['email'],
             )
             new_user.set_password(data['senha'])
             db.session.add(new_user)
@@ -57,7 +63,8 @@ def init_app(app):
                     SECRET_KEY,
                     algorithm = 'HS256'
                 )
-                return jsonify({'message': 'Login bem-sucedido!', 'token':f'Bearer {token}'}), 200
+
+                return jsonify({'message': 'Login bem-sucedido!', 'token':f'Bearer {token}', 'permissao_usuario': user.permissao_usuario}), 200
             else:
                 return jsonify({'error': 'Email ou senha invalidos'}), 401
         
@@ -95,19 +102,24 @@ def token_required(f):
 def ensure_schema(app):
     with app.app_context():
             
-        db.session.execute(text('CREATE SCHEMA IF NOT EXISTS beeter;'))
+        db.session.execute(text('CREATE SCHEMA IF NOT EXISTS better;'))
         db.session.commit()
 
 def ensure_table(app):
       with app.app_context():
-        db.session.execute(text('''
+        db.session.execute(text(''' 
             CREATE TABLE IF NOT EXISTS usuarios (
-                id INT AUTO_INCREMENT PRIMARY KEY,
-                nome VARCHAR(100) NOT NULL,
-                email VARCHAR(100) UNIQUE NOT NULL,
-                senha VARCHAR(255) NOT NULL,
-                data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-            );
+            id INT AUTO_INCREMENT PRIMARY KEY,  
+            nome_usuario VARCHAR(255),          
+            data_nasc DATE,                     
+            cpf VARCHAR(14),                    
+            empresa VARCHAR(255),               
+            setor_empresa VARCHAR(255),             
+            email VARCHAR(255) UNIQUE,          
+            senha VARCHAR(255),                 
+            permissao_usuario TINYINT,         
+            data_registro DATETIME DEFAULT CURRENT_TIMESTAMP  
+        );
         '''))
         db.session.commit()
    

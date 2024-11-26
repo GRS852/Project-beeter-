@@ -11,11 +11,12 @@ function SidebarComponent({ show, onHide }) {
       </Offcanvas.Header>
       <Offcanvas.Body>
         <Nav className="flex-column">
-          <Nav.Link href="/">Pagina principal</Nav.Link>
-          <Nav.Link href="#courses">Cursos</Nav.Link>
+          <Nav.Link href="/home">Pagina principal</Nav.Link>
+          <Nav.Link href="/courses">Cursos</Nav.Link>
           <Nav.Link href="/perfil">Meu perfil</Nav.Link>
           <Nav.Link href="/forum">Forum</Nav.Link>
           <Nav.Link href="#help">Ajuda</Nav.Link>
+          <Nav.Link href="/">Sair</Nav.Link>
         </Nav>
       </Offcanvas.Body>
     </Offcanvas>

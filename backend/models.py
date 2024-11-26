@@ -9,6 +9,7 @@ class Usuario(db.Model):
     nome_usuario = db.Column(db.String(100), nullable=False)
     data_nasc = db.Column(db.Date, nullable=False)
     cpf = db.Column(db.String(14), nullable=False)
+    empresa=db.Column(db.String(100), nullable=False)
     setor_empresa = db.Column(db.String(100), nullable=False)
     email = db.Column(db.String(100), unique=True, nullable=False)
     senha = db.Column(db.String(255), nullable=False)
