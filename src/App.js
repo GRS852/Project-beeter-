@@ -6,7 +6,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Home from './pages/Home.js';
 import Login from './pages/Login.js';
-import User from './pages/User.js';
+import Register from './pages/Register.js';
+import Perfil from './pages/Perfil.js'
+import Page_LiderancaGestao from './pages/Page_LiderancaGestao.js';
+import Page_ResolucaoProblemas from './pages/Page_ResolucaoProblemas.js';
+import Page_TraEquipeCola from './pages/Page_TraEquipeCola.js';
+import Page_ComEficazAssertiva from './pages/Page_ComEficazAssertiva.js';
+import Page_InteligenciaEmocional from './pages/Page_InteligenciaEmocional.js';
 import AuthProvider from './components/AuthContext/AuthContext.js';
 import PrivateRoute from './components/ProtectedRoute/ProtectedRoute.js';
 
@@ -17,9 +23,9 @@ function App() {
         <div className='app-container'>
           <div className='content-routes'>
             <Routes>
-              <Route path="/login" element={<Login />} />
+              <Route path="/" element={<Login />} />
               <Route 
-                path="/" 
+                path="/home" 
                 element={
                   <PrivateRoute>
                     <Home />
@@ -36,9 +42,57 @@ function App() {
                 } 
               />
               <Route 
-                path="/user" 
+                path="/page_LiderancaGestao" 
                 element={
-                    <User />
+                  <PrivateRoute>
+                    <Page_LiderancaGestao />
+                  </PrivateRoute>
+                } 
+              />
+              <Route 
+                path="/page_ResolucaoProblemas" 
+                element={
+                  <PrivateRoute>
+                    <Page_ResolucaoProblemas />
+                  </PrivateRoute>
+                } 
+              />
+               <Route 
+                path="/page_ComEficazAssertiva" 
+                element={
+                  <PrivateRoute>
+                    <Page_ComEficazAssertiva />
+                  </PrivateRoute>
+                } 
+              />
+               <Route 
+                path="/page_InteligenciaEmocional" 
+                element={
+                  <PrivateRoute>
+                    <Page_InteligenciaEmocional/>
+                  </PrivateRoute>
+                } 
+              />
+              <Route 
+                path="/page_TraEquipeCola" 
+                element={
+                  <PrivateRoute>
+                    <Page_TraEquipeCola />
+                  </PrivateRoute>
+                } 
+              />
+              <Route 
+                path="/perfil" 
+                element={
+                  <PrivateRoute>
+                    <Perfil />
+                  </PrivateRoute>
+                } 
+              />
+              <Route 
+                path="/register" 
+                element={
+                    <Register />
                 } 
               />
             </Routes>

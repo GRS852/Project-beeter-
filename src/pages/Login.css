@@ -4,6 +4,7 @@
 
 .login-container {
     display: flex;
+    height: 115vh;
 }
 
 .login-image-container {
@@ -20,7 +21,7 @@
 }
 
 .divider {
-    height: 100vh;
+    height: 115vh;
     border-right: 10px solid #5EDF26;
 }
 

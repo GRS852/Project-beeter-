@@ -10,7 +10,7 @@
             "port": 3306,
             "driver": "MySQL",
             "name": "BetterDB",
-            "database": "better",
+            "database": "beeter",
             "username": "root"
         }
     ]

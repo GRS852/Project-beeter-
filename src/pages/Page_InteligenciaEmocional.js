@@ -1,25 +1,23 @@
 import React from "react";
 import NavbarComponent from "../components/NavBar/NavBarComponent";
-// eslint-disable-next-line
 import Banner from "../components/Banner/Banner"; 
 import ListaDeTopicos from "../components/ListaDeTopicos/ListaDeTopicos";
-
-import './Curso.css'
+import './Pages_Cursos.css'
 
 const topicos = [
-    { titulo: 'Relacionamento Interpessoal: conceito', texto: 'Reproduzir' },
-    { titulo: 'Trabalho em Equipe: conceito e fundamentos', texto: 'Reproduzir' },
-    { titulo: 'Exercícios', texto: 'Iniciar agora' },
-    { titulo: 'Princípios de Etiqueta Social e Profissional', texto: 'Reproduzir' },
-    { titulo: 'Fundamentos da adminisytação de conflitos', texto: 'Reproduzir' },
-    { titulo: 'Processo de comunicação: emissor, receptor, canal, mensagem, ruídos e feedback', texto: 'Reproduzir' },
-    { titulo: 'Comunicação assertiva: conceito e aplicabilidade', texto: 'Reproduzir' },
+    { titulo: 'Domine suas emoções e revolucione suas habilidades sociais', texto: 'Reproduzir' },
+    { titulo: 'Como se beneficiar ao máximo de cada aprendizado', texto: 'Reproduzir' },
+    { titulo: 'Os três tipos de observação humana', texto: 'Reproduzir' },
+    { titulo: 'Exercício', texto: 'Iniciar Agora' },
+    { titulo: 'Os cinco níveis diferentes de experiência humana', texto: 'Reproduzir' },
+    { titulo: 'O Espectro dos Espaços de Possibilidade de Crença', texto: 'Reproduzir' },
+    { titulo: 'O modelo de Aprendizagem Sócio-Cultural', texto: 'Reproduzir' },
     { titulo: 'Relatório final', texto: 'Iniciar Agora' }
   ];
 
-const banner = {imagem: '/imagens/Training_2.png' , alt: 'Liderança e Gestão'}
+const banner = {imagem: '/imagens/Training_4.png' , alt: 'Inteligência emocional'}
 
-function teste() {
+function Page_InteligenciaEmocional() {
     return(
         <div className="curso-page">
             <NavbarComponent />
@@ -37,4 +35,4 @@ function teste() {
     );
 }
 
-export default teste;
+export default Page_InteligenciaEmocional;

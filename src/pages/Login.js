@@ -29,7 +29,7 @@ function Login() {
                 const data = await response.json();
                 localStorage.setItem('authToken', data.token);
                 alert('Login bem-sucedido!');
-                window.location.href = '/';
+                window.location.href = '/home';
             } else {
                 const errorData = await response.json();
                 setError(errorData.error || 'Erro ao fazer login');
@@ -86,7 +86,6 @@ function Login() {
                     </div>
                 </div>
             </main>
-            <Footer />
         </div>
     );
 }

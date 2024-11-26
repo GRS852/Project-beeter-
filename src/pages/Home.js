@@ -3,6 +3,7 @@ import NavbarComponent from "../components/NavBar/NavBarComponent";
 import Banner from "../components/Banner/Banner";
 
 import './Home.css';
+import { Link } from "react-router-dom";
 
 const banner = { imagem: '/imagens/gestao.png', alt: 'Liderança e Gestão' };
 
@@ -13,12 +14,28 @@ function Home() {
         {
             src: "/imagens/comunicacao.png",
             alt: "Comunicação Eficaz e Assertiva",
+            link: "/Page_ComEficazAssertiva"
         },
         {
             src: "/imagens/gestao.png",
             alt: "Liderança e Gestão",
+            link: "/Page_LiderancaGestao"
         },
-
+        {
+            src: "/imagens/Training_3.png",
+            alt: "Resolução de problemas",
+            link: "/Page_ResolucaoProblemas"
+        },
+        {
+            src: "/imagens/Training_4.png",
+            alt: "Inteligencia Emocional",
+            link: "/Page_InteligenciaEmocional"
+        },
+        {
+            src: "/imagens/Training_2.png",
+            alt: "Trabalho em Equipe e Colaboração",
+            link: "/Page_TraEquipeCola"
+        },
     ];
 
     const handleNext = () => {
@@ -46,7 +63,9 @@ function Home() {
                                         <section className="d-flex justify-content-between">
                                             {items.map((item, index) => (
                                                 <div className="card" key={index}>
-                                                    <img src={item.src} className="card-img-top" alt={item.alt} />
+                                                    <Link to={item.link}>
+                                                        <img src={item.src} className="card-img-top" alt={item.alt} />
+                                                    </Link>
                                                     <div className="card-body">
                                                         <section className="d-flex justify-content-between">
                                                             <div className="card-control">
