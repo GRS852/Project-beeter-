@@ -13,6 +13,7 @@ import Page_ResolucaoProblemas from './pages/Page_ResolucaoProblemas.js';
 import Page_TraEquipeCola from './pages/Page_TraEquipeCola.js';
 import Page_ComEficazAssertiva from './pages/Page_ComEficazAssertiva.js';
 import Page_InteligenciaEmocional from './pages/Page_InteligenciaEmocional.js';
+import Video from './pages/Video.js'
 import AuthProvider from './components/AuthContext/AuthContext.js';
 import PrivateRoute from './components/ProtectedRoute/ProtectedRoute.js';
 
@@ -90,12 +91,33 @@ function App() {
                 } 
               />
               <Route 
-                path="/register" 
+                path="/perfil" 
                 element={
-                    <Register />
+                  <PrivateRoute>
+                    <Perfil />
+                  </PrivateRoute>
                 } 
               />
+              <Route 
+                path="/video" 
+                element={
+                  <PrivateRoute>
+                    <Video />
+                  </PrivateRoute>
+                } 
+              />
+              <Route 
+                path="/register" 
+                element={
+                  <PrivateRoute>
+                    <Register />
+                  </PrivateRoute>
+                } 
+              />
+  
+              
             </Routes>
+            
           </div>
         </div>
       </Router>

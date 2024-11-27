@@ -5,9 +5,6 @@
     margin-bottom: -8.5rem;
 }
 
-.curso-page main div h1 strong {
-    color: #B471CC;
-}
 
 .curso-page main div .content {
     display: flex; 
@@ -26,7 +23,6 @@
     width: 211px;
     height: 47px;
     background-color: #dcdada;
-    color: #8A32A9;
     border: none;
     border-radius: 91px;
     font-size: 26px;

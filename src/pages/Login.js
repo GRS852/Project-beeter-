@@ -27,13 +27,14 @@ function Login() {
 
             if (response.ok) {
                 const data = await response.json();
-                console.log('Resposta da API:', data); // Log para depuração
+                console.log('Resposta da API:', data); 
                 console.log('Permissão de usuário:', data.permissao_usuario)
                 console.log('Permissão de email:', data.email);
                 
                 if (data.permissao_usuario == 0){
                     
                     localStorage.setItem('authToken', data.token);
+                    console.log(data.token)
                     alert('Login bem-sucedido!');
                     window.location.replace('/home');
 

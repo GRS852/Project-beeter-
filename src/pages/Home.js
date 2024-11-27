@@ -28,7 +28,7 @@ function Home() {
         },
         {
             src: "/imagens/Training_4.png",
-            alt: "Inteligencia Emocional",
+            alt: "Inteligência Emocional",
             link: "/Page_InteligenciaEmocional"
         },
         {
@@ -38,10 +38,12 @@ function Home() {
         },
     ];
 
+    
     const handleNext = () => {
         setActiveIndex((prevIndex) => (prevIndex + 1) % items.length);
     };
 
+    
     const handlePrev = () => {
         setActiveIndex((prevIndex) =>
             prevIndex === 0 ? items.length - 1 : prevIndex - 1
@@ -59,7 +61,13 @@ function Home() {
                             <h1 className="carrosel-title-txt"><b>Formações Recomendadas</b></h1>
                             <div id="carouselExampleIndicators" className="carousel-slide mx-auto">
                                 <div className="carousel-inner">
-                                    <div className="carousel-item active">
+                                    <div
+                                        className="carousel-item active"
+                                        style={{
+                                            transform: `translateX(-${activeIndex * 10}%)`, 
+                                            transition: 'transform 0.5s ease-in-out' 
+                                        }}
+                                    >
                                         <section className="d-flex justify-content-between">
                                             {items.map((item, index) => (
                                                 <div className="card" key={index}>
@@ -86,8 +94,6 @@ function Home() {
                                     className="carousel-control-prev"
                                     onClick={handlePrev}
                                     type="button"
-                                    data-bs-target="#carouselExampleIndicators"
-                                    data-bs-slide="prev"
                                 >
                                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span className="visually-hidden">Previous</span>
@@ -96,8 +102,6 @@ function Home() {
                                     className="carousel-control-next"
                                     onClick={handleNext}
                                     type="button"
-                                    data-bs-target="#carouselExampleIndicators"
-                                    data-bs-slide="next"
                                 >
                                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span className="visually-hidden">Next</span>

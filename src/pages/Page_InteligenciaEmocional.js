@@ -5,7 +5,7 @@ import ListaDeTopicos from "../components/ListaDeTopicos/ListaDeTopicos";
 import './Pages_Cursos.css'
 
 const topicos = [
-    { titulo: 'Domine suas emoções e revolucione suas habilidades sociais', texto: 'Reproduzir' },
+    { titulo: 'Domine suas emoções e revolucione suas habilidades sociais', texto: 'Reproduzir', link: '/video'},
     { titulo: 'Como se beneficiar ao máximo de cada aprendizado', texto: 'Reproduzir' },
     { titulo: 'Os três tipos de observação humana', texto: 'Reproduzir' },
     { titulo: 'Exercício', texto: 'Iniciar Agora' },

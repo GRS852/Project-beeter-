@@ -24,4 +24,13 @@
     font-family: 'Oswald', 'sans serif';
     font-size: 30px;
     font-weight: bold;
-  }
+}
+
+.bt-lista:hover{
+    color: rgba(138, 50, 169, 0.5) !important;
+}
+
+.bt-lista:active {
+    background-color: rgba(138, 50, 169, 0.2)!important;;
+    color: rgba(138, 50, 169, 0.5)!important;; 
+}

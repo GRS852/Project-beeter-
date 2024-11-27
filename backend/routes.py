@@ -64,13 +64,32 @@ def init_app(app):
                     algorithm = 'HS256'
                 )
 
-                return jsonify({'message': 'Login bem-sucedido!', 'token':f'Bearer {token}', 'permissao_usuario': user.permissao_usuario}), 200
+                return jsonify({'message': 'Login bem-sucedido!', 'token': token, 'permissao_usuario': user.permissao_usuario}), 200
             else:
                 return jsonify({'error': 'Email ou senha invalidos'}), 401
         
         except Exception as e:
             return jsonify({'error': str(e)}), 500
-        
+    
+    @app.route('/user-info', methods=['GET'])
+    @token_required
+    def get_user_data(current_user):
+        try:
+            return jsonify({
+                'id': current_user.id,
+                'nome_usuario': current_user.nome_usuario,
+                'email': current_user.email,
+                'permissao_usuario': current_user.permissao_usuario,
+                'data_nasc': current_user.data_nasc.strftime('%d/%m/%Y'),
+                'cpf': current_user.cpf,
+                'empresa': current_user.empresa,
+                'setor_empresa': current_user.setor_empresa
+            }), 200
+        except Exception as e:
+            return jsonify({'error': str(e)}), 500
+    
+
+
     @app.route('/protected', methods=['GET'])
     @token_required
     def protected_required(current_user):
