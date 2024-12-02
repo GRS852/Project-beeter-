@@ -62,7 +62,6 @@ function Forum() {
                         <ViewMore></ViewMore> 
                     </div>   
                 </div>
-                
             </main>
         </div>
     );

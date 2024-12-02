@@ -1,10 +1,8 @@
 import React from "react";
 import NavbarComponent from "../components/NavBar/NavBarComponent";
-// eslint-disable-next-line
 import Banner from "../components/Banner/Banner"; 
 import ListaDeTopicos from "../components/ListaDeTopicos/ListaDeTopicos";
-
-import './Curso.css'
+import './Pages_Cursos.css'
 
 const topicos = [
     { titulo: 'Apresentação', texto: 'Reproduzir' },
@@ -20,7 +18,7 @@ const topicos = [
 
 const banner = {imagem: '/imagens/gestao.png' , alt: 'Liderança e Gestão'}
 
-function teste() {
+function Page_LiderancaGestao() {
     return(
         <div className="curso-page">
             <NavbarComponent />
@@ -38,4 +36,4 @@ function teste() {
     );
 }
 
-export default teste;
+export default Page_LiderancaGestao;

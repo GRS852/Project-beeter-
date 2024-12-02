@@ -1,52 +1,57 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
+.dados{
+    display: flex; 
+    flex-direction: column;
+    flex-wrap: wrap; 
+    align-items: center; 
     background-color: #2C2B2B;
     color: #5EDF26;
+    height: 115vh;
 }
 
-strong {
-    color: #fff;
+.content{
+    position: absolute;
+    align-items: center;
+    width: 49rem;
+    height: 26.5rem !important;
+    top: 20.4rem;
+    background-color: #1F1F1F;
 }
 
-.dados-embaixo{
-    color: #B1EF96;
-    text-align:right;
-    width: 28%;    
-}
-
-.nome-unibta{
+.nome-empresa{
     color: #dd81da
 }
 
 .titulo-meu-perfil{
     position: absolute;
     text-align: center;
-    left: 45%;
-    top: 10%;
+    top: 15%;
+    font-family: 'Oswald', 'sans-serif';
   }
 
-.dados{
-    display: flex; 
-    flex-wrap: wrap; 
-    align-items: center; 
-}
+
 
 .textos {
-    /* Espaço entre os parágrafos */
-    position: absolute;
-  top: 50%;
+  position: absolute;
+  top: 35%;
   left: 60%;
   transform: translate(-50%, -50%);
+  font-family: 'Oswald', 'sans-serif';
+}
+
+.nome-perfil{
+    padding-top: 1.5%;
+    font-family: 'Oswald', 'sans-serif';
+}
+
+.nome-empresa{
+    font-family: 'Oswald', 'sans-serif';
 }
 
 .avatar{
     position: absolute;
-    top: 30%;
-    left: 5%;
+    align-items: center;
+    top: 25%;
+    left: 10%;
     img{
         width: 25%;
         height: auto;
@@ -54,11 +59,7 @@ strong {
     }
 }
 
-.content{
-    position: relative;
-    width: 784px;
-    height: 424px;
-    left: 25%;
-    top: 150px;
-    background-color: #1F1F1F;
+
+strong {
+    color: #fff;
 }

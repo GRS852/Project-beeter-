@@ -1,0 +1,100 @@
+.login {
+    height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    height: 115vh;
+}
+
+.login-image-container {
+    width: 800px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+}
+
+.login-logo {
+    width: 500px;
+    height: 600px;
+    padding-left: 65px;
+}
+
+.divider {
+    height: 115vh;
+    border-right: 10px solid #5EDF26;
+}
+
+.login-form-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    background-color: white;
+}
+
+.login-title {
+    font-size: 75px;
+}
+
+.login-subtitle {
+    color: #8A32A9;
+    font-size: 24px;
+}
+
+.form-style{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-input {
+    width: 509px;
+    height: 62px;
+    border: 4px solid #5EDF26;
+    border-radius: 6px;
+    outline: none;
+    font-size: 24px;
+    padding-left: 12px;
+    
+}
+
+.input-group {
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+.forgot-password {
+    margin-left: 145px;
+} 
+
+.forgot-password a {
+    padding: 20px;
+    text-decoration: none;
+    color: #8A32A9;
+    font-size: 17px;
+}
+
+.login-button {
+    padding: 6px 50px;
+    border-radius: 50px;
+    background-color: #5EDF26;
+    border: transparent;
+}
+
+.login-button p {
+    font-size: 20px;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.background-image {
+    width: 100%;
+}

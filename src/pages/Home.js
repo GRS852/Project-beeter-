@@ -3,6 +3,7 @@ import NavbarComponent from "../components/NavBar/NavBarComponent";
 import Banner from "../components/Banner/Banner";
 
 import './Home.css';
+import { Link } from "react-router-dom";
 
 const banner = { imagem: '/imagens/gestao.png', alt: 'Liderança e Gestão' };
 
@@ -13,18 +14,36 @@ function Home() {
         {
             src: "/imagens/comunicacao.png",
             alt: "Comunicação Eficaz e Assertiva",
+            link: "/Page_ComEficazAssertiva"
         },
         {
             src: "/imagens/gestao.png",
             alt: "Liderança e Gestão",
+            link: "/Page_LiderancaGestao"
         },
-        // Adicione outros itens aqui...
+        {
+            src: "/imagens/Training_3.png",
+            alt: "Resolução de problemas",
+            link: "/Page_ResolucaoProblemas"
+        },
+        {
+            src: "/imagens/Training_4.png",
+            alt: "Inteligência Emocional",
+            link: "/Page_InteligenciaEmocional"
+        },
+        {
+            src: "/imagens/Training_2.png",
+            alt: "Trabalho em Equipe e Colaboração",
+            link: "/Page_TraEquipeCola"
+        },
     ];
 
+    
     const handleNext = () => {
         setActiveIndex((prevIndex) => (prevIndex + 1) % items.length);
     };
 
+    
     const handlePrev = () => {
         setActiveIndex((prevIndex) =>
             prevIndex === 0 ? items.length - 1 : prevIndex - 1
@@ -42,11 +61,19 @@ function Home() {
                             <h1 className="carrosel-title-txt"><b>Formações Recomendadas</b></h1>
                             <div id="carouselExampleIndicators" className="carousel-slide mx-auto">
                                 <div className="carousel-inner">
-                                    <div className="carousel-item active">
+                                    <div
+                                        className="carousel-item active"
+                                        style={{
+                                            transform: `translateX(-${activeIndex * 10}%)`, 
+                                            transition: 'transform 0.5s ease-in-out' 
+                                        }}
+                                    >
                                         <section className="d-flex justify-content-between">
                                             {items.map((item, index) => (
                                                 <div className="card" key={index}>
-                                                    <img src={item.src} className="card-img-top" alt={item.alt} />
+                                                    <Link to={item.link}>
+                                                        <img src={item.src} className="card-img-top" alt={item.alt} />
+                                                    </Link>
                                                     <div className="card-body">
                                                         <section className="d-flex justify-content-between">
                                                             <div className="card-control">
@@ -67,8 +94,6 @@ function Home() {
                                     className="carousel-control-prev"
                                     onClick={handlePrev}
                                     type="button"
-                                    data-bs-target="#carouselExampleIndicators"
-                                    data-bs-slide="prev"
                                 >
                                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span className="visually-hidden">Previous</span>
@@ -77,8 +102,6 @@ function Home() {
                                     className="carousel-control-next"
                                     onClick={handleNext}
                                     type="button"
-                                    data-bs-target="#carouselExampleIndicators"
-                                    data-bs-slide="next"
                                 >
                                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span className="visually-hidden">Next</span>

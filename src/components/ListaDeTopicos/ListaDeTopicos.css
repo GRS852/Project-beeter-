@@ -1,7 +1,7 @@
 .zerocontent {
-    display: flex; /* Adiciona flexbox para o contêiner */
-    align-items: center; /* Alinha os itens verticalmente ao centro */
-    justify-content: space-between; /* Distribui os elementos; você pode usar flex-end para alinhá-los à direita */
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
     position: relative;
     width: 1424px;
     height: 69px;
@@ -24,4 +24,13 @@
     font-family: 'Oswald', 'sans serif';
     font-size: 30px;
     font-weight: bold;
-  }
+}
+
+.bt-lista:hover{
+    color: rgba(138, 50, 169, 0.5) !important;
+}
+
+.bt-lista:active {
+    background-color: rgba(138, 50, 169, 0.2)!important;;
+    color: rgba(138, 50, 169, 0.5)!important;; 
+}

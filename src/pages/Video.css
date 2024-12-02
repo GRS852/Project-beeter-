@@ -1,0 +1,48 @@
+.video-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    height: 130vh;
+    padding: 5%;
+    background-color: #121212;
+}
+
+.titulo-video{
+    color: #8A32A9;
+    font-family: 'Oswald', 'sans-serif';
+}
+
+.content{
+    display: block;
+    margin: 0 auto;
+    border: none;
+    max-width: 100%;
+    height: auto;
+}
+
+.titulo-meu-perfil {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+
+.resumo-aula {
+    color: white;
+}
+
+.resumo-aula h1 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Oswald', 'sans-serif';
+    background-color: grey;
+}
+
+.resumo-aula p {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: white;
+    font-family: 'Oswald', 'sans-serif';
+}
