@@ -96,17 +96,15 @@ body {
   justify-content: center;
 }
 
-<<<<<<< HEAD
 .imput::placeholder{
   color:'#8A32A9'
-=======
+}
 
 .carousel-control-next {
   position: absolute;
   right: 3.125rem;
   top: 50%;
   transform: translateY(-50%);
->>>>>>> 995a3490356e7f65ec8b6281eca90f6c6a507bf2
 }
 
 .carousel-control-prev {

@@ -1,10 +1,8 @@
 import React from "react";
 import NavbarComponent from "../components/NavBar/NavBarComponent";
-// eslint-disable-next-line
 import Banner from "../components/Banner/Banner"; 
 import ListaDeTopicos from "../components/ListaDeTopicos/ListaDeTopicos";
-
-import './Curso.css'
+import './Pages_Cursos.css'
 
 const topicos = [
     { titulo: 'Compreender o pensamento como um processo linguístico', texto: 'Reproduzir' },
@@ -16,9 +14,9 @@ const topicos = [
     { titulo: 'Relatório final', texto: 'Iniciar Agora' }
   ];
 
-const banner = {imagem: '/imagens/Training_3.png' , alt: 'Liderança e Gestão'}
+const banner = {imagem: '/imagens/Training_3.png' , alt: 'Resoluções de problemas'}
 
-function teste() {
+function Page_ResolucaoProblemas() {
     return(
         <div className="curso-page">
             <NavbarComponent />
@@ -35,4 +33,4 @@ function teste() {
     );
 }
 
-export default teste;
+export default Page_ResolucaoProblemas;

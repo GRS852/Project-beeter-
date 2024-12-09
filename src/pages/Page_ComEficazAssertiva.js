@@ -1,25 +1,22 @@
 import React from "react";
 import NavbarComponent from "../components/NavBar/NavBarComponent";
-// eslint-disable-next-line
 import Banner from "../components/Banner/Banner"; 
 import ListaDeTopicos from "../components/ListaDeTopicos/ListaDeTopicos";
-
-import './Curso.css'
+import './Pages_Cursos.css'
 
 const topicos = [
-    { titulo: 'Relacionamento Interpessoal: conceito', texto: 'Reproduzir' },
-    { titulo: 'Trabalho em Equipe: conceito e fundamentos', texto: 'Reproduzir' },
+    { titulo: 'Entender os conceitos e impactos da comunicação', texto: 'Reproduzir' },
+    { titulo: 'Desenvolver habilidades para ouvir e elevar a comunicação interpessoal', texto: 'Reproduzir' },
     { titulo: 'Exercícios', texto: 'Iniciar agora' },
-    { titulo: 'Princípios de Etiqueta Social e Profissional', texto: 'Reproduzir' },
-    { titulo: 'Fundamentos da adminisytação de conflitos', texto: 'Reproduzir' },
-    { titulo: 'Processo de comunicação: emissor, receptor, canal, mensagem, ruídos e feedback', texto: 'Reproduzir' },
-    { titulo: 'Comunicação assertiva: conceito e aplicabilidade', texto: 'Reproduzir' },
+    { titulo: 'Identificar as diferenças de estilo de comunicação', texto: 'Reproduzir' },
+    { titulo: 'Aprender o método ideal de comunicação', texto: 'Reproduzir' },
+    { titulo: 'Saber distinguir a comunicação agressiva, passiva e assertiva', texto: 'Reproduzir' },
     { titulo: 'Relatório final', texto: 'Iniciar Agora' }
   ];
 
-const banner = {imagem: '/imagens/Training_2.png' , alt: 'Liderança e Gestão'}
+const banner = {imagem: '/imagens/Training_1.png' , alt: 'Comunicação eficaz e assertiva'}
 
-function teste() {
+function Page_ComEficazAssertiva() {
     return(
         <div className="curso-page">
             <NavbarComponent />
@@ -37,4 +34,4 @@ function teste() {
     );
 }
 
-export default teste;
+export default Page_ComEficazAssertiva;

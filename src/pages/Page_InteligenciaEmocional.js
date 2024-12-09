@@ -1,13 +1,11 @@
 import React from "react";
 import NavbarComponent from "../components/NavBar/NavBarComponent";
-// eslint-disable-next-line
 import Banner from "../components/Banner/Banner"; 
 import ListaDeTopicos from "../components/ListaDeTopicos/ListaDeTopicos";
-
-import './Curso.css'
+import './Pages_Cursos.css'
 
 const topicos = [
-    { titulo: 'Domine suas emoções e revolucione suas habilidades sociais', texto: 'Reproduzir' },
+    { titulo: 'Domine suas emoções e revolucione suas habilidades sociais', texto: 'Reproduzir', link: '/video'},
     { titulo: 'Como se beneficiar ao máximo de cada aprendizado', texto: 'Reproduzir' },
     { titulo: 'Os três tipos de observação humana', texto: 'Reproduzir' },
     { titulo: 'Exercício', texto: 'Iniciar Agora' },
@@ -17,9 +15,9 @@ const topicos = [
     { titulo: 'Relatório final', texto: 'Iniciar Agora' }
   ];
 
-const banner = {imagem: '/imagens/Training_4.png' , alt: 'Liderança e Gestão'}
+const banner = {imagem: '/imagens/Training_4.png' , alt: 'Inteligência emocional'}
 
-function teste() {
+function Page_InteligenciaEmocional() {
     return(
         <div className="curso-page">
             <NavbarComponent />
@@ -37,4 +35,4 @@ function teste() {
     );
 }
 
-export default teste;
+export default Page_InteligenciaEmocional;
