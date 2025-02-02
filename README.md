@@ -1,75 +1,90 @@
-<<<<<<< HEAD
-# Project-beeter-
-Nosso projeto é focado no desenvolvimento de uma platarfoma web (A principio) na educação de colaboradores de uma empresa
-=======
-# Getting Started with Create React App
+# Projeto Beeter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Visão Geral
+O Project Beeter é um projeto acadêmico desenvolvido para a faculdade, com o objetivo de criar um sistema CRUD e páginas para uma plataforma que oferece cursos para funcionários de uma empresa. A versão inicial é focada no desenvolvimento web, com um frontend construído em React e um backend baseado em Flask.
 
-## Available Scripts
+## Tecnologias Utilizadas
 
-In the project directory, you can run:
+### Frontend
+- React 18.3.1
+- React Bootstrap 2.10.4
+- Bootstrap 5.3.3
+- React Router DOM 6.26.1
 
-### `npm start`
+### Backend
+- Flask (Framework web baseado em Python)
+- SQLAlchemy (ORM para interações com banco de dados)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Dependências Adicionais
+- Bibliotecas de testes: `@testing-library/react`, `@testing-library/jest-dom`, `@testing-library/user-event`
+- Performance web: `web-vitals`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Instalação e Configuração
 
-### `npm test`
+### Pré-requisitos
+- Node.js e npm instalados
+- Python 3.x instalado
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Configuração do Frontend
+1. Navegue até o diretório do projeto.
+2. Instale as dependências:
+   ```sh
+   npm install
+   ```
+3. Inicie o servidor de desenvolvimento:
+   ```sh
+   npm start
+   ```
+   A aplicação estará disponível em `http://localhost:3000`.
 
-### `npm run build`
+### Configuração do Backend
+1. Configure um ambiente virtual (opcional, mas recomendado):
+   ```sh
+   python -m venv venv
+   source venv/bin/activate  # No Windows use `venv\Scripts\activate`
+   ```
+2. Instale as dependências:
+   ```sh
+   pip install -r requirements.txt
+   ```
+3. Execute a aplicação Flask:
+   ```sh
+   python run.py
+   ```
+   O backend será executado em `http://localhost:5000`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Variáveis de Ambiente
+As configurações são armazenadas no arquivo `.env`. As seguintes variáveis são necessárias:
+```
+HOST=0.0.0.0
+SQLALCHEMY_ECHO=True
+SECRET_KEY="sua_chave_secreta"
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Executando Testes
+Para rodar os testes do frontend:
+```sh
+npm test
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Para testes no backend (supondo que estejam configurados):
+```sh
+pytest
+```
 
-### `npm run eject`
+## Implantação
+1. Gere o build do frontend:
+   ```sh
+   npm run build
+   ```
+2. Faça a implantação do backend com um servidor pronto para produção, como `gunicorn`:
+   ```sh
+   gunicorn -w 4 -b 0.0.0.0:5000 run:app
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> master
+## Endpoints da API
+O backend expõe vários endpoints de API. Para visualizar as rotas disponíveis, execute:
+```sh
+python run.py
+```
+Isso imprimirá as rotas disponíveis no console.
